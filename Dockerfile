@@ -14,10 +14,10 @@ RUN apt-get update \
 
 RUN pip3 install jupyter
 
-RUN curl -L -o jupyter-scala https://git.io/vzhRi \
- && chmod +x jupyter-scala \
- && ./jupyter-scala \
- && rm -f jupyter-scala
+RUN curl -L -o jupyter-scala-2.10 https://git.io/vzhR7 \
+ && chmod +x jupyter-scala-2.10 \
+ && ./jupyter-scala-2.10 \
+ && rm -f jupyter-scala-2.10
 
 ENV NBCONFIG /root/.jupyter/nbconfig
 RUN mkdir -p $NBCONFIG \
