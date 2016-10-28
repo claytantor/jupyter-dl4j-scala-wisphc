@@ -1,3 +1,4 @@
+#@IgnoreInspection BashAddShebang
 # Jupyter Notebook with jupyter-scala
 # https://github.com/alexarchambault/jupyter-scala
 
