@@ -3,11 +3,17 @@
 
 FROM java:8
 
-MAINTAINER Yeongho Kim <yeonghoey@gmail.com>
+MAINTAINER Clay Graham <claytantor@gmail.com>
+
+ENV VERSION=0.3.0-M3
+ENV SCALA_VERSION=2.10.6
+ENV os.arch=x86_64
+ENV os.name=linux
 
 RUN apt-get update \
  && apt-get install -y \
     curl \
+    gradle \
     python3 \
     python3-pip \
  && rm -rf /var/lib/apt/lists/*
@@ -34,8 +40,12 @@ RUN { echo '#!/bin/bash'; \
     } > /entrypoint.sh \
  && chmod +x /entrypoint.sh
 
-VOLUME /notebooks
-WORKDIR /notebooks
+ADD . /opt/app
+WORKDIR /opt/app
+RUN ./gradlew clean build copyDepJars
+
 EXPOSE 8888
+
+WORKDIR /opt/app/src/main/ipynb
 
 CMD ["/entrypoint.sh"]
