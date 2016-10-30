@@ -2,14 +2,14 @@
 
 This project is intended to provide a comprehensive deeplearning environment
 using the deeplearning4j platform. *Currently this project is in progress and 
-major components have not been included yet.*
+major components have not been included yet.* 
 
 ## Status
 
 * Jupyter w/ Scala Kernal (included) - https://github.com/alexarchambault/jupyter-scala
 * deeplearning4j (coming soon)
 * nd4j-native-linux-x86 (included)
-* d3js (coming soon)
+* wisp for highcharts (included) 
 
 ## Runing The container
 
