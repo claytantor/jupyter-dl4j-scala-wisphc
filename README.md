@@ -20,4 +20,10 @@ $ docker run -d -p 8888:8888 claytantor/jupyter-dl4j-scala-d3:latest
 ## Notebooks
 
 ### nd4j1.ipynb
-very simple nd4j example to prove out the complete working integration of all parts.
+vThis workbook is intended to provide a the "MVP" of a jupyter enabled notebook for
+ [deeplearning4j](https://deeplearning4j.org). Its goal is to provide a working 
+ example of a DL4J network, and then to use [wisp](https://github.com/quantifind/wisp) 
+ to display the results of the network classification output.
+ 
+ This example is based on the classic classicication problem using 
+ [iris flower data](https://en.wikipedia.org/wiki/Iris_flower_data_set). 
