@@ -25,7 +25,7 @@ vThis workbook is intended to provide a the "MVP" of a jupyter enabled notebook 
  example of a DL4J network, and then to use [wisp](https://github.com/quantifind/wisp) 
  to display the results of the network classification output.
  
- ![scatter](https://github.com/claytantor/jupyter-dl4j-scala-wisphc/blob/master/docs/img/nd4j1.png "scatter")
+ ![scatter](https://raw.githubusercontent.com/claytantor/jupyter-dl4j-scala-wisphc/master/docs/img/nd4j1.png "scatter")
  
  This example is based on the classic classicication problem using 
  [iris flower data](https://en.wikipedia.org/wiki/Iris_flower_data_set). 
