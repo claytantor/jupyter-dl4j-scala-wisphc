@@ -14,7 +14,7 @@ major components have not been included yet.*
 ## Runing The container
 
 ```
-$ docker run -d -p 8888:8888 claytantor/jupyter-dl4j-scala-d3:latest
+$ docker run -d -p 8888:8888 claytantor/jupyter-dl4j-scala-wisphc:latest
 ```
 
 ## Notebooks
