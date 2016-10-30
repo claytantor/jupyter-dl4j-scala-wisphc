@@ -45,7 +45,7 @@ class DeepLearning4JMultiLayerNetwork(val filePath: String) {
 
   var dataFile: String = filePath
 
-  var series: Highchart = histogram(Seq(1, 2, 2, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 6, 7), 7)
+  var networkOutput: Table[Integer, Integer, Double] = null
 
   def execute() {
     System.out.println("Hello, deeplearning4j!")
@@ -99,7 +99,6 @@ class DeepLearning4JMultiLayerNetwork(val filePath: String) {
     val model: MultiLayerNetwork = new MultiLayerNetwork(conf)
     model.init()
     model.setListeners(new ScoreIterationListener(100))
-
     model.fit(trainingData)
 
     //evaluate the model on the test set
@@ -107,10 +106,9 @@ class DeepLearning4JMultiLayerNetwork(val filePath: String) {
     val output: INDArray = model.output(testData.getFeatureMatrix)
     eval.eval(testData.getLabels, output)
     System.out.println(eval.stats)
-    System.out.println(eval)
 
+    networkOutput = makeTableFromArray(output,3)
 
-    series = histogram(Seq(8, 14, 3, 23), 4)
   }
 
 
