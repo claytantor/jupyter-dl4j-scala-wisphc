@@ -1,8 +1,8 @@
 # jupyter-dl4j-scala-wisphc
 
 This project is intended to provide a comprehensive deeplearning environment
-using the deeplearning4j platform. *Currently this project is in progress and 
-major components have not been included yet.* 
+using the deeplearning4j platform. *We have noticed incosistent startup behaviours
+for this conatiner, this has been resolved by restarting the Jupyter kernal.* 
 
 ## Status
 
@@ -24,6 +24,8 @@ vThis workbook is intended to provide a the "MVP" of a jupyter enabled notebook 
  [deeplearning4j](https://deeplearning4j.org). Its goal is to provide a working 
  example of a DL4J network, and then to use [wisp](https://github.com/quantifind/wisp) 
  to display the results of the network classification output.
+ 
+ ![scatter](docs/img/nd4j1.png "scatter")
  
  This example is based on the classic classicication problem using 
  [iris flower data](https://en.wikipedia.org/wiki/Iris_flower_data_set). 
