@@ -44,6 +44,7 @@ RUN { echo '#!/bin/bash'; \
 ADD . /opt/app
 WORKDIR /opt/app
 RUN ./gradlew clean build copyDepJars
+RUN rm -rvf /root/.gradle/caches/modules-2
 
 EXPOSE 8888
 
